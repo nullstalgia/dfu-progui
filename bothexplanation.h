@@ -15,6 +15,9 @@ public:
     explicit BothExplanation(QWidget *parent = nullptr);
     ~BothExplanation();
 
+private slots:
+    void on_closeButton_clicked();
+
 private:
     Ui::BothExplanation *ui;
 };

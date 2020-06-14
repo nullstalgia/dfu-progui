@@ -12,3 +12,8 @@ BothExplanation::~BothExplanation()
 {
     delete ui;
 }
+
+void BothExplanation::on_closeButton_clicked()
+{
+    this->close();
+}

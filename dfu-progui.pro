@@ -16,13 +16,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aboutbox.cpp \
+    bothexplanation.cpp \
     main.cpp \
     dfuprogui.cpp
 
 HEADERS += \
+    aboutbox.h \
+    bothexplanation.h \
     dfuprogui.h
 
 FORMS += \
+    aboutbox.ui \
+    bothexplanation.ui \
     dfuprogui.ui
 
 # Default rules for deployment.

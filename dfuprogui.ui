@@ -6,16 +6,775 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>628</width>
+    <height>503</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>dfuprogui</string>
+   <string>dfu-programmer GUI</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <property name="windowIcon">
+   <iconset theme="cpu">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="bothButton">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>70</y>
+      <width>71</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Both?</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>381</width>
+      <height>250</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Target Device:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="targetBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>AVR based controllers:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atmega32u4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atmega16u2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atmega16u4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atmega8u2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atmega32u6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb82</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb162</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb646</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb647</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb1286-4k</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb1287-4k</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb1286</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at90usb1287</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8051 based controllers:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at89c5132</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at89c5131</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at89c5130</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at89c51snd2c</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at89c51snd1c</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>AVR32 based controllers:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a0128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a1128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a0256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a1256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a0512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a1512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a0512es</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a1512es</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a364</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a364s</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a3128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a3128s</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a3256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a3256s</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3a4256s</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b064</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b164</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b0128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b1128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b0256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b1256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b0256es</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b1256es</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b0512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3b1512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c064</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c0128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c0256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c0512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c164</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c1128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c1256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c1512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c264</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c2128</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c2256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>at32uc3c2512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>XMEGA based controllers:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64a1u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128a1u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64a3u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128a3u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega192a3u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega256a3u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega16a4u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega32a4u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64a4u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128a4u</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega256a3bu</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64b1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128b1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64b3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128b3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega64c3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega128c3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega256c3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega384c3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega16c4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>atxmega32c4</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="dfuOutput">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>DFU Output will go here...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>100</y>
+      <width>221</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QCheckBox" name="autoFlash">
+       <property name="text">
+        <string>Auto</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QCheckBox" name="forceErase">
+       <property name="text">
+        <string>Force</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="eraseButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Erase</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QCheckBox" name="forceFlash">
+       <property name="text">
+        <string>Force</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="autoErase">
+       <property name="text">
+        <string>Auto</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="launchButton">
+       <property name="text">
+        <string>Launch</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+L</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="flashButton">
+       <property name="text">
+        <string>Flash</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+F</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="autoLaunch">
+       <property name="text">
+        <string>Auto</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>File to Flash:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="fileComboBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="openFileButton">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Open File</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+O</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>104</width>
+      <height>86</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QRadioButton" name="radioFlashLoad">
+       <property name="text">
+        <string>Flash</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioEEPROMLoad">
+       <property name="text">
+        <string>EEPROM</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioBothLoad">
+       <property name="text">
+        <string>Both</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>270</y>
+      <width>222</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="autoButton">
+       <property name="text">
+        <string>Run through &quot;Autos&quot;</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+U</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearOutputButton">
+       <property name="text">
+        <string>Clear log</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>601</width>
+      <height>112</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="saveLabel">
+       <property name="text">
+        <string>Save data to file:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="saveFileEdit"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveFileSelect">
+           <property name="text">
+            <string>Select File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveFileStart">
+           <property name="text">
+            <string>Start</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="radioFlashSave">
+           <property name="text">
+            <string>Flash</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioEEPROMSave">
+           <property name="text">
+            <string>EEPROM</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioBothSave">
+           <property name="text">
+            <string>Both</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Extra Command Line Arguments:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="extraArgumentsField"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>628</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionClear_Recent_Files"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionClear_Recent_Files">
+   <property name="text">
+    <string>Clear Recent Files</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
